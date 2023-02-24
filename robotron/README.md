@@ -24,7 +24,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O Robotron 2000 é um app para ajudar a construir um robô com as melhores peças possíveis e acabar com a ameaça alienígena!
 
-- [Visite o projeto online](https://)
+- [Visite o projeto online](https://luizfelipegondim.github.io/Robotron-2000/)
 
 
 ## :memo: Licença
