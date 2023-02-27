@@ -1,13 +1,18 @@
 const form = document.getElementById("novoItem")
 const list = document.getElementById("lista")
+const items = []
 
 form.addEventListener("submit", (event) => {
     event.preventDefault()
 
-    let name = event.target.elements["nome"].value
-    let amount = event.target.elements["quantidade"].value
+    const name = event.target.elements["nome"]
+    const amount = event.target.elements["quantidade"]
 
-    addElement(name, amount)
+    addElement(name.value, amount.value)
+
+    name.value = ""
+    quantidade.value = ""
+
 })
 
 function addElement(name, amount) {
@@ -21,4 +26,13 @@ function addElement(name, amount) {
     newItem.innerHTML += name
 
     list.appendChild(newItem)
+
+    const item = {
+        "name": name,
+        "amount": amount  
+    }
+
+    items.push(item)
+
+    localStorage.setItem("items", JSON.stringify(items))
 }
