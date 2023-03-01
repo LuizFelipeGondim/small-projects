@@ -1,6 +1,10 @@
 const form = document.getElementById("novoItem")
 const list = document.getElementById("lista")
-const items = []
+const items = JSON.parse(localStorage.getItem("items")) || []
+
+items.forEach( (element) => {
+    addElement(element)
+})
 
 form.addEventListener("submit", (event) => {
     event.preventDefault()
@@ -8,31 +12,32 @@ form.addEventListener("submit", (event) => {
     const name = event.target.elements["nome"]
     const amount = event.target.elements["quantidade"]
 
-    addElement(name.value, amount.value)
+    const currentItem = {
+        "name": name.value,
+        "amount": amount.value  
+    }
+
+    addElement(currentItem)
+
+
+    items.push(currentItem)
+
+    localStorage.setItem("items", JSON.stringify(items))
 
     name.value = ""
     quantidade.value = ""
 
 })
 
-function addElement(name, amount) {
+function addElement(item) {
     const newItem = document.createElement("li")
     newItem.classList.add("item")
 
     const numberItem = document.createElement("strong")
-    numberItem.innerHTML = amount
+    numberItem.innerHTML = item.amount
 
     newItem.appendChild(numberItem)
-    newItem.innerHTML += name
+    newItem.innerHTML += item.name
 
     list.appendChild(newItem)
-
-    const item = {
-        "name": name,
-        "amount": amount  
-    }
-
-    items.push(item)
-
-    localStorage.setItem("items", JSON.stringify(items))
 }
