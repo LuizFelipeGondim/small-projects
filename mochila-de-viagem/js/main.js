@@ -24,9 +24,9 @@ form.addEventListener("submit", (event) => {
 
         editElement(currentItem)
 
-        items[exists.id] = currentItem
+        items[items.findIndex(element => element.id === exists.id)] = currentItem
     } else {
-        currentItem.id = items.length
+        currentItem.id = items[items.length-1] ? (items[items.length-1]).id + 1 : 0
 
         addElement(currentItem)
     
@@ -52,9 +52,30 @@ function addElement(item) {
     newItem.appendChild(numberItem)
     newItem.innerHTML += item.name
 
+    newItem.appendChild(deleteButton(item.id))
+
     list.appendChild(newItem)
 }
 
 function editElement(item) {
     document.querySelector("[data-id='"+item.id+"']").innerHTML = item.amount
+}
+
+function deleteButton(id) {
+    const buttonElement = document.createElement("button")
+    buttonElement.innerText = "X"
+
+    buttonElement.addEventListener("click", function() {
+        deleteElement(this.parentNode, id)
+    })
+
+    return buttonElement
+}
+
+function deleteElement(tag, id) {
+    tag.remove()
+
+    items.splice(items.findIndex(element => element.id === id), 1)
+
+    localStorage.setItem("items", JSON.stringify(items))
 }
