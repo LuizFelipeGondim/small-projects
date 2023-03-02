@@ -1,5 +1,5 @@
 html {
-    background: radial-gradient(farthest-corner at right top,#21A09D, #06182D);
+    background-color:#21A09D;
     height: 100%;
     font-family: 'Roboto', cursive;
 }
@@ -21,6 +21,7 @@ html {
     background: #C5965F;
     border-radius: 10px;
     gap: 2em;
+
 }
   
 .mochila {
@@ -100,9 +101,10 @@ html {
     cursor: pointer;
 }
 
-.lista {
+ul.lista {
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .item {
@@ -130,3 +132,24 @@ html {
     font-weight: 400;
 }
 
+@media screen and (max-width: 1024px) {
+    .conteudo {
+        flex-direction: column;
+    }
+
+    .principal {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .conteudo {
+        padding: 10px;
+    }
+
+    .principal {
+        flex-direction: column;
+        align-items: center;
+    }
+}
