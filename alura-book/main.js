@@ -1,27 +1,30 @@
+const cep = document.getElementById('cep')
+
 async function buscaEndereco(cep) {
+    const mensagemErro = document.getElementById('erro')
+    mensagemErro.innerHTML = ""
 
     try {
-        const consultaCEP = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-        const consultaCEPConvertida = await consultaCEP.json();
+        const consultaCEP = await fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        const consultaCEPConvertida = await consultaCEP.json()
+        
         if (consultaCEPConvertida.erro) {
-            throw Error('CEP não existente!');
+            throw Error('CEP não existente!')
         }
-        const cidade = document.getElementById('cidade');
-        const logradouro = document.getElementById('endereco');
-        const estado = document.getElementById('estado');
+        const cidade = document.getElementById('cidade')
+        const logradouro = document.getElementById('endereco')
+        const estado = document.getElementById('estado')
 
-        cidade.value = consultaCEPConvertida.localidade;
-        logradouro.value = consultaCEPConvertida.logradouro;
-        estado.value = consultaCEPConvertida.uf;
+        cidade.value = consultaCEPConvertida.localidade
+        logradouro.value = consultaCEPConvertida.logradouro
+        estado.value = consultaCEPConvertida.uf
 
-        console.log(consultaCEPConvertida);
-        return consultaCEPConvertida;
+        return consultaCEPConvertida
     } catch (erro) {
-
-        console.log(erro);
+        mensagemErro.innerHTML = `<p class="erro__texto">CEP inválido. Tente novamente!</p>`
+        console.log(erro)
     }
 
 }
 
-const cep = document.getElementById('cep');
-cep.addEventListener("focusout", () => buscaEndereco(cep.value));
+cep.addEventListener("focusout", () => buscaEndereco(cep.value))
