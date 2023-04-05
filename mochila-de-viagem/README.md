@@ -24,8 +24,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O projeto mochila de viagem é utilizado para ensinar como armazenar dados no navegador com javascript
 
-- [Visite o projeto online](https://)
-
 
 ## :memo: Licença
 
