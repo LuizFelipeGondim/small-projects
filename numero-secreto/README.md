@@ -24,7 +24,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Projeto
 
 O projeto Número Secreto é um jogo que utiliza o reconhecimento da voz para acertar o número escolhido.
-
+- [Visite o projeto online](https://luizfelipegondim.github.io/numero-secreto/)
 
 ## :memo: Licença
 
