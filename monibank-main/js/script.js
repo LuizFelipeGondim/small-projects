@@ -1,5 +1,5 @@
 import validaCPF from "./validaCPF.js"
-import validaMaioridade from "./validaIdade.js"
+import validaMaioridade from "./validaMaioridade.js"
 
 const camposDoFormulario = document.querySelectorAll("[required]")
 
