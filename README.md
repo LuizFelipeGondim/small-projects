@@ -7,3 +7,7 @@ Repositório com pequenos projetos construídos com fins de estudo
 
 > [Robotron](https://github.com/LuizFelipeGondim/small-projects/tree/main/robotron)
 
+> [Alura book](https://github.com/LuizFelipeGondim/small-projects/tree/main/alura-book)
+
+> [Monibank](https://github.com/LuizFelipeGondim/small-projects/tree/main/monibank-main)
+
