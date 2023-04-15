@@ -11,4 +11,4 @@ Repositório com pequenos projetos construídos com fins de estudo
 
 > [Monibank](https://github.com/LuizFelipeGondim/small-projects/tree/main/monibank-main)
 
-> [Monibank](https://github.com/LuizFelipeGondim/small-projects/tree/main/monibank-main)
+> []()
