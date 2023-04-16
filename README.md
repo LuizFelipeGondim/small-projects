@@ -11,4 +11,4 @@ Repositório com pequenos projetos construídos com fins de estudo
 
 > [Monibank](https://github.com/LuizFelipeGondim/small-projects/tree/main/monibank-main)
 
-> []()
+> [Gerador de histórias bobas](https://github.com/LuizFelipeGondim/small-projects/tree/main/gerador-historias-bobas)
